@@ -1,181 +1,167 @@
 <!DOCTYPE html>
-<!-- @falvojr: Reference article https://www.w3schools.com/howto/howto_website_create_resume.asp -->
-<!-- @falvojr: Useful link to use fontawesome (fa) icons: https://fontawesome.com/v4/icons/ -->
 <html lang="pt-BR">
 
-  <head>
-    <title>NOME_COMPLETO</title>
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <title>Saiiru</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Roboto", sans-serif;
+    }
+  </style>
+</head>
 
-    <style>
-      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-    </style>
-    
-  </head>
+<body class="bg-gray-900 text-white">
 
-  <body class="w3-light-grey" cz-shortcut-listen="true">
-  
-    <!-- Page Container -->
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
-  
-      <!-- The Grid -->
-      <div class="w3-row-padding">
-  
-        <!-- Left Column -->
-        <div class="w3-third">
-  
-          <div class="w3-white w3-text-grey w3-card-4">
-            <!-- @falvojr: This container has been modified to not use a profile picture. -->
-            <div class="w3-container">
-              <h2>NOME_COMPLETO</h2>
+  <!-- Page Container -->
+  <div class="w-11/12 mx-auto py-8">
+
+    <!-- The Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+      <!-- Left Column -->
+      <div>
+
+        <div class="bg-gray-800 rounded-lg p-8">
+          <!-- Profile -->
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Urias Machado Santos</h2>
+            <p><i class="fa fa-briefcase fa-fw mr-2 text-teal-400"></i>FullStack Developer</p>
+            <p><i class="fa fa-home fa-fw mr-2 text-teal-400"></i>Feira de Santana, BA, Brasil</p>
+            <p><i class="fa fa-envelope fa-fw mr-2 text-teal-400"></i>sairufsa@gmail.com</p>
+            <p><i class="fa fa-phone fa-fw mr-2 text-teal-400"></i>+55 (75)988166198</p>
+          </div>
+
+          <!-- Skills -->
+          <div class="mb-8">
+            <h3 class="text-lg font-bold mb-4">Skills</h3>
+            <div class="flex items-center mb-2">
+              <span class="w-1/4">Javascript</span>
+              <div class="w-3/4 bg-gray-700 rounded-full">
+                <div class="bg-teal-400 text-xs leading-none py-1 text-center text-white rounded-full" style="width:50%">50%</div>
+              </div>
             </div>
-            <div class="w3-container">
-              <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>CARGO</p>
-              <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>LOCAL</p>
-              <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>EMAIL</p>
-              <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>TELEFONE</p>
-              <hr>
-  
-              <p class="w3-large">
-                <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b>
-              </p>
-              <p>TODO</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+            <div class="flex items-center mb-2">
+              <span class="w-1/4">Typescript</span>
+              <div class="w-3/4 bg-gray-700 rounded-full">
+                <div class="bg-teal-400 text-xs leading-none py-1 text-center text-white rounded-full" style="width:50%">50%</div>
               </div>
-              <p>TODO</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-              </div>
-              <p>TODO</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-              </div>
-              <p>TODO</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-              </div>
-              <br>
-  
-              <p class="w3-large w3-text-theme">
-                <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b>
-              </p>
-              <p>TODO</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:50%"></div>
-              </div>
-              <p>TODO</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:50%"></div>
-              </div>
-              <p>TODO</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:50%"></div>
-              </div>
-              <br>
             </div>
-          </div><br>
-  
-          <!-- End Left Column -->
+            <div class="flex items-center mb-2">
+              <span class="w-1/4">Java</span>
+              <div class="w-3/4 bg-gray-700 rounded-full">
+                <div class="bg-teal-400 text-xs leading-none py-1 text-center text-white rounded-full" style="width:50%">50%</div>
+              </div>
+            </div>
+            <div class="flex items-center mb-2">
+              <span class="w-1/4">React.js</span>
+              <div class="w-3/4 bg-gray-700 rounded-full">
+                <div class="bg-teal-400 text-xs leading-none py-1 text-center text-white rounded-full" style="width:50%">50%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Idiomas</h3>
+            <div class="flex items-center mb-2">
+              <span class="w-1/4">English</span>
+              <div class="w-3/4 bg-gray-700 rounded-full">
+                <div class="bg-teal-400 leading-none py-1 text-center text-white rounded-full" style="width:50%">50%</div>
+              </div>
+            </div>
+            <div class="flex items-center mb-2">
+              <span class="w-1/4">Portuguese</span>
+              <div class="w-3/4 bg-gray-700 rounded-full">
+                <div class="bg-teal-400 leading-none py-1 text-center text-white rounded-full" style="width:50%">50%</div>
+              </div>
+            </div>
+          </div>
         </div>
-  
-        <!-- Right Column -->
-        <div class="w3-twothird">
-    
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-terminal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Sobre</h2>
+
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <div class="bg-gray-800 rounded-lg p-8 mb-8">
+          <h2 class="text-2xl font-bold mb-4"><i class="fa fa-terminal fa-fw mr-2 text-teal-400"></i>Sobre</h2>
+          <p>TODO</p>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-8 mb-8">
+          <h2 class="text-2xl font-bold mb-4"><i class="fa fa-suitcase fa-fw mr-2 text-teal-400"></i>Experiências</h2>
+          <div class="mb-4">
+            <h5 class="opacity-75 font-bold">TODO</h5>
+            <h6 class="text-teal-400"><i class="fa fa-calendar fa-fw mr-2"></i>INICIO - <span class="bg-teal-400 text-xs px-2 py-1 rounded">Atual</span></h6>
             <p>TODO</p>
           </div>
-
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16">
-              <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiências
-            </h2>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>TODO</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - <span class="w3-tag w3-teal w3-round">Atual</span></h6>
-              <p>TODO</p>
-              <hr>
-            </div>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>TODO</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - FIM</h6>
-              <p>TODO</p>
-            </div>
+          <div>
+            <h5 class="opacity-75 font-bold">TODO</h5>
+            <h6 class="text-teal-400"><i class="fa fa-calendar fa-fw mr-2"></i>INICIO - FIM</h6>
+            <p>TODO</p>
           </div>
-  
-          <div class="w3-container w3-card w3-white">
-            <h2 class="w3-text-grey w3-padding-16">
-              <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Educação
-            </h2>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>Digital Innovation One (DIO)</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - <span class="w3-tag w3-teal w3-round">Atual</span></h6>
-              <p>
-                Maior plataforma de educação aberta em TI da América Latina, com mais 1 milhão de usuários. 
-                A DIO possui parcerias com algumas das empresas mais inovadoras do mundo, proporcionando experiências 
-                de ensino imersivas e com foco em empregabilidade. Nesse contexto, seguem meus principais certificados:
-              </p>
-              <ul>
-                <li><a href="LINK_CERTIFICADO" target="_blank">TODO</a></li>
-                <li><a href="LINK_CERTIFICADO" target="_blank">TODO</a></li>
-                <li><a href="LINK_CERTIFICADO" target="_blank">TODO</a></li>
-              </ul>
-              <hr>
-            </div>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>TODO</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - FIM</h6>
-              <p>TODO</p>
-            </div>
-          </div>
-
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16">
-              <i class="fa fa-git fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projetos
-            </h2>
-            <div class="w3-container">
-              <h6 class="w3-text-teal">
-                <i class="fa fa-github fa-fw w3-margin-right"></i>
-                <a href="LINK_GITHUB" target="_blank">USUARIO_GITHUB/REPO</a>
-              </h6>
-              <p>TODO</p>
-              <hr>
-            </div>
-            <div class="w3-container">
-              <h6 class="w3-text-teal">
-                <i class="fa fa-gitlab fa-fw w3-margin-right"></i>
-                <a href="LINK_GITLAB" target="_blank">USUARIO_GITLAB/REPO</a>
-              </h6>
-              <p>TODO</p>
-            </div>
-          </div>
-  
-          <!-- End Right Column -->
         </div>
-  
-        <!-- End Grid -->
+
+        <div class="bg-gray-800 rounded-lg p-8">
+          <h2 class="text-2xl font-bold mb-4"><i class="fa fa-graduation-cap fa-fw mr-2 text-teal-400"></i>Educação</h2>
+          <div class="mb-4">
+            <h5 class="opacity-75 font-bold">Digital Innovation One (DIO)</h5>
+            <h6 class="text-teal-400"><i class="fa fa-calendar fa-fw mr-2"></i>INICIO - <span class="bg-teal-400 text-xs px-2 py-1 rounded">Atual</span></h6>
+            <p>
+              Maior plataforma de educação aberta em TI da América Latina, com mais 1 milhão de usuários. 
+              A DIO possui parcerias com algumas das empresas mais inovadoras do mundo, proporcionando experiências 
+              de ensino imersivas e com foco em empregabilidade. Nesse contexto, seguem meus principais certificados:
+            </p>
+            <ul>
+              <li><a href="LINK_CERTIFICADO" target="_blank">TODO</a></li>
+              <li><a href="LINK_CERTIFICADO" target="_blank">TODO</a></li>
+              <li><a href="LINK_CERTIFICADO" target="_blank">TODO</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="opacity-75 font-bold">TODO</h5>
+            <h6 class="text-teal-400"><i class="fa fa-calendar fa-fw mr-2"></i>INICIO - FIM</h6>
+            <p>TODO</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-8">
+          <h2 class="text-2xl font-bold mb-4"><i class="fa fa-git fa-fw mr-2 text-teal-400"></i>Projetos</h2>
+          <div class="mb-4">
+            <h6 class="text-teal-400"><i class="fa fa-github fa-fw mr-2"></i><a href="LINK_GITHUB" target="_blank">USUARIO_GITHUB/REPO</a></h6>
+            <p>TODO</p>
+          </div>
+          <div>
+            <h6 class="text-teal-400"><i class="fa fa-gitlab fa-fw mr-2"></i><a href="LINK_GITLAB" target="_blank">USUARIO_GITLAB/REPO</a></h6>
+            <p>TODO</p>
+          </div>
+        </div>
+
       </div>
-  
-      <!-- End Page Container -->
+
     </div>
-  
-    <footer class="w3-container w3-teal w3-center w3-margin-top">
+
+    <footer class="bg-teal-400 text-gray-100 text-center py-4 mt-8">
       <p>Minhas Redes Sociais</p>
-      <a href="LINK_GITHUB" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-      <a href="LINK_LINKEDIN" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-      <a href="LINK_FACEBOOK" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-      <a href="LINK_INSTAGRAM" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-      <a href="LINK_TWITTER" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+      <a href="LINK_GITHUB" target="_blank"><i class="fa fa-github hover:opacity-75"></i></a>
+      <a href="LINK_LINKEDIN" target="_blank"><i class="fa fa-linkedin hover:opacity-75"></i></a>
+      <a href="LINK_FACEBOOK" target="_blank"><i class="fa fa-facebook-official hover:opacity-75"></i></a>
+      <a href="LINK_INSTAGRAM" target="_blank"><i class="fa fa-instagram hover:opacity-75"></i></a>
+      <a href="LINK_TWITTER" target="_blank"><i class="fa fa-twitter hover:opacity-75"></i></a>
       <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
-  
+
   </body>
 
 </html>
