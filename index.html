@@ -1,452 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <title>Portfolio Neon Noir Blue</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
-    <title>Saiiru</title>
-    <style>
-      :root {
-        --primary-color: #222240;
-        --secondary-color: #111130;
-        --accent-color: #ffcc00;
-        --background-color: #000000;
-        --text-color: #ffffff;
-        --card-background-color: #f5f5f5;
-        --box-shadow-color: rgba(4, 53, 145, 0.596);
-        --link-color: #000000;
-        --blue-rgb: 5 53 145;
-        --background-rgb: 29 30 34;
-        --primary-rgb: var(--blue-rgb);
-        --blob-color-1: rgb(var(--blue-rgb));
-        --blob-color-2: dodgerblue;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      /* Global Styles */
-      body {
-        height: 100vh;
-  display: grid;
-  place-items: center;
-  background-color: rgb(var(--background-rgb));
-  margin: 0rem;
-
-      }
-
-      .container {
-        max-width: 100%;
-        margin: 0 auto;
-      }
-
-      /* Header Styles */
-      header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary-color);
-        padding: 20px;
-        z-index: 999;
-      }
-
-      header ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-      }
-
-      header ul li {
-        margin-right: 20px;
-      }
-
-      header ul li a {
-        color: var(--text-color);
-        text-decoration: none;
-        font-size: 18px;
-        transition: color 0.3s ease;
-      }
-
-      header ul li a:hover,
-      header ul li a.active {
-        color: var(--accent-color);
-      }
-
-      /* Section Styles */
-      section {
-        padding: 100px 0;
-        text-align: center;
-      }
-
-      section h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: var(--secondary-color);
-      }
-
-      /* Hero Section Styles */
-
-
-      .screen {
-        width: calc(100% - 2px);
-        height: 100vh;
-        /* Adjust the height as needed */
-        margin: 0 auto;
-        border: 3px solid rgb(var(--primary-rgb) / 80%);
-        border-radius: 1rem;
-        background: linear-gradient(
-          to right,
-          rgba(var(--primary-rgb), 0.2),
-          rgba(var(--primary-rgb), 0.1)
-        );
-        overflow: hidden;
-
-        text-align: center;
-        font-family: "Space Grotesk", monospace;
-        position: relative;
-      }
-
-      .screen-overlay {
-        background: linear-gradient(
-          rgb(var(--primary-rgb) / 0.15),
-          rgb(var(--primary-rgb) / 0.15) 3px,
-          transparent 3px,
-          transparent 9px
-        );
-        background-size: 100% 9px;
-        height: 100%;
-        width: 100%;
-        animation: pan-overlay 22s infinite linear;
-        position: absolute;
-        z-index: 2;
-        left: 0px;
-        top: 0px;
-      }
-      @keyframes pan-image {
-        0% {
-          background-position: 36% 42%;
-          background-size: 200%;
-        }
-
-        20% {
-          background-position: 30% 35%;
-          background-size: 200%;
-        }
-
-        20.0001% {
-          /* -- View 2 -- */
-          background-position: 60% 85%;
-          background-size: 500%;
-        }
-
-        40% {
-          background-position: 49% 81%;
-          background-size: 500%;
-        }
-
-        40.0001% {
-          /* -- View 3 -- */
-          background-position: 80% 42%;
-          background-size: 300%;
-        }
-
-        60% {
-          background-position: 84% 33%;
-          background-size: 300%;
-        }
-
-        60.0001% {
-          /* -- View 4 -- */
-          background-position: 0% 0%;
-          background-size: 300%;
-        }
-
-        80% {
-          background-position: 15% 4%;
-          background-size: 300%;
-        }
-
-        80.0001% {
-          /* -- View 5 -- */
-          background-position: 80% 10%;
-          background-size: 300%;
-        }
-
-        100% {
-          background-position: 72% 14%;
-          background-size: 300%;
-        }
-      }
-
-      .screen > .screen-image {
-        object-fit: cover;
-        background-image: url("/assets/image.jpg");
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: 1;
-        left: 0px;
-        top: 0px;
-        background-size: 300%;
-        background-position: 0% 0%;
-        filter: sepia(100%) hue-rotate(160deg);
-        opacity: 0.6;
-        animation: pan-image 15s linear infinite;
-      }
-
-      .screen .screen-content {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding: 20px;
-      }
-
-      .screen:after,
-.screen:before {
-  content: "";
-  height: 5px;
-  position: absolute;
-  z-index: 9;
-  left: 50%;
-  translate: -50% 0%;
-  background-color: white;
-}
-
-.screen:before {
-  width: 15%;
-  top: 0rem;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
-
-.screen:after {
-  width: 25%;
-  bottom: 0rem;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-
-
-      .screen h1 {
-        font-size: 48px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        color: var(--text-color);
-      }
-
-      .screen p {
-        font-size: 24px;
-        margin-bottom: 30px;
-        color: var(--text-color);
-      }
-
-      .screen a {
-        display: inline-block;
-        background-color: var(--accent-color);
-        color: var(--text-color);
-        padding: 12px 24px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 20px;
-        transition: background-color 0.3s ease;
-      }
-      .screen a:hover {
-        background-color: #ffa500;
-      }
-
-      /* Skill Card Styles */
-      .skill-card {
-        background: var(--card-background-color);
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 42px;
-        box-shadow: 0 2px 4px var(--box-shadow-color);
-        text-align: left;
-      }
-
-      .skill-card h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-
-      .skill-card p {
-        margin: 0;
-      }
-
-      /* Timeline Item Styles */
-      .timeline-item {
-        background: var(--card-background-color);
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 4px var(--box-shadow-color);
-        text-align: left;
-      }
-
-      .timeline-item h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-
-      .timeline-item p {
-        margin: 0;
-      }
-
-      /* Contact Links Styles */
-      .contact-links {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-
-      .contact-links a {
-        color: var(--link-color);
-        text-decoration: none;
-        font-size: 18px;
-        margin: 0 10px;
-      }
-
-      @keyframes pan-overlay {
-        from {
-          background-position: 0% 0%;
-        }
-        to {
-          background-position: 0% -100%;
-        }
-      }
-
-      /* Media Queries */
-      @media (max-width: 768px) {
-        .screen {
-          padding: 100px 0;
-          margin-bottom: 0rem;
-        }
-
-        .screen h1 {
-          font-size: 36px;
-        }
-
-        .screen p {
-          font-size: 20px;
-        }
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
-
   <body>
-    <!-- <header>
-      <ul>
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </header> -->
+    <div id="blob"></div>
+    <div id="blur"></div>
 
-    <div class="container">
-      <section id="hero" class="screen">
-        <div class="screen-image" />
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#home"><span class="line"></span>Home</a>
+          </li>
+          <li>
+            <a href="#sobre"><span class="line"></span>Sobre</a>
+          </li>
+          <li>
+            <a href="#projetos"><span class="line"></span>Projetos</a>
+          </li>
+          <li>
+            <a href="#contato"><span class="line"></span>Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="hero" class="section">
+      <div class="screen">
+        <div class="screen-image"></div>
         <div class="screen-overlay"></div>
         <div class="screen-content">
-          <i class="screen-icon fa-brands fa-codepen"></i>
-          <div class="screen-content">
-            <i class="screen-icon fa-brands fa-codepen"></i>
-            <div class="screen-user">
-              <span class="name" data-value="Urias Machado Santos">Urias Machado Santos</span>
-              <!-- <a class="link" href="https://youtube.com/@Hyperplexed" target="_blank">@Hyperplexed</a> -->
-            </div>
+          <i class="fas fa-code"></i>
+          <div class="screen-user">
+            <span class="name" data-value="SAIRU">SAIRU</span>
+            <p>
+              I'm a passionate software developer with a strong focus on
+              creating elegant and efficient solutions. My skills include
+              JavaScript, React, Next.js, Node.js, Java, Python, SQL, NoSQL, and
+              more. With a solid background in both front-end and back-end
+              development, I have the ability to tackle complex problems and
+              deliver high-quality software.
+            </p>
+            <a class="link" href="https://github.com">
+              <i class="fab fa-github"></i>
+            </a>
           </div>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill-card">
-          <h3>Web Development</h3>
-          <p>
-            I have experience in HTML, CSS, and JavaScript. I can create
-            responsive websites and web applications.
-          </p>
         </div>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <div class="content">
+        <h2>About Me</h2>
+        <p>
+          Experienced Software Developer with a solid background in JavaScript,
+          Java, and Python. Highly skilled in developing robust and scalable
+          software solutions. Demonstrated ability to deliver successful
+          projects for a variety of sectors, from startups to large
+          corporations. Proficient in both front-end and back-end development,
+          with expertise in frameworks such as ReactJS, AngularJS, and Vue.js. I
+          am always eager to take on new challenges and expand my knowledge!
+        </p>
+      </div>
+    </section>
 
-        <div class="skill-card">
-          <h3>Programming</h3>
-          <p>
-            I am proficient in languages like Python, Java, and C++. I can solve
-            complex problems and write efficient code.
-          </p>
-        </div>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <div class="timeline-item">
-          <h3>Bachelor's Degree in Computer Science</h3>
-          <p>University of XYZ, 2018-2022</p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>High School Diploma</h3>
-          <p>ABC High School, 2014-2018</p>
-        </div>
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <div class="timeline-item">
-          <h3>Web Developer Intern</h3>
-          <p>XYZ Company, 2022</p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Software Engineer</h3>
-          <p>ABC Corporation, 2022-Present</p>
-        </div>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="timeline-item">
-          <h3>E-commerce Website</h3>
-          <p>
-            Developed an e-commerce website using HTML, CSS, and JavaScript.
-            Integrated with a payment gateway for online transactions.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Inventory Management System</h3>
-          <p>
-            Built an inventory management system using Python and Django. It
-            allows users to track and manage their inventory efficiently.
-          </p>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-links">
-          <a href="mailto:urias@example.com">Email</a>
-          <a href="tel:+1234567890">Phone</a>
-          <a href="https://www.linkedin.com/in/urias/">LinkedIn</a>
-          <a href="https://github.com/urias">GitHub</a>
-        </div>
-      </section>
-    </div>
+    <footer>
+      <p>&copy; 2023 Portfolio Neon Noir Blue. All rights reserved.</p>
+    </footer>
   </body>
 </html>
